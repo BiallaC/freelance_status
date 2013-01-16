@@ -1,4 +1,12 @@
 FreelanceStatus::Application.routes.draw do
+
+  root to: "static_pages#home"
+
+  match '/aboutus'   , to: 'static_pages#aboutus'
+  match '/contact'   , to: 'static_pages#contact'
+  match '/howitworks', to: 'static_pages#howitworks'
+  match '/impressum' , to: 'static_pages#impressum'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
