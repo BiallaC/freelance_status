@@ -7,8 +7,8 @@ describe "StaticPages" do
 	describe "Home page" do
   	before { visit root_path }
 
-		it { should have_selector('h1', text: 'Freelance Status') }
-		it { should have_selector('title', text: 'Home') }
+    it { should have_selector('h1'   , text: 'Freelance Status') }
+    it { should have_selector('title', text: 'Home') }
     it { should have_link('Sign up now!') }
 	end
   

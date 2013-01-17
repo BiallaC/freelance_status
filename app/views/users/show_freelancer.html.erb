@@ -1,0 +1,13 @@
+<% provide(:title, @user.name) %>
+<div class="row">	
+	<aside class="span4">
+		<%= render ('layouts/profile') %>
+	</aside>
+	<div class="span8">
+		<h3 style="text-decoration: underline">Get in contact</h3>
+		<p>If you want to get in contact with your customers and tell them about your status, you could send them an invitation to Freelance-Status.</p> 
+		<p>By clicking <%= link_to "here",'#'%> we will send you an e-mail to your account with a nifty invitation text, which you can easily forward to your customer.</p>
+		<br>
+		<h3 style="text-decoration: underline">Your customers</h3>
+	</div>
+</div>

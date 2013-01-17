@@ -1,19 +1,19 @@
 <section>
 	<h1>
-		<%= gravatar_for @freelancer %>
-		<%= @freelancer.name %>
+		<%= gravatar_for @user %>
+		<%= @user.name %>
 	</h1>
 </section>
 <table>
 	<tr>
 		<td>Status:</td>
-		<td><%= @freelancer.status %></td>
+		<td><%= @user.status %></td>
 	</tr>
 	<tr>
 		<td>Daily rate:</td> 
-		<td><%= @freelancer.daily_rate %></td>
+		<td><%= @user.daily_rate %></td>
 	</tr>
 	<tr>
-		<td><%= link_to "Edit profile", edit_freelancer_path(@freelancer) %></td>
+		<td><%= link_to "Edit profile", edit_user_path(@user) %></td>
 	</tr>
 </table>
