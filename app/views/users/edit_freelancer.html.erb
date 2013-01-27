@@ -1,0 +1,33 @@
+<% provide(:title, "Edit freelancer") %>
+<div class="row">	
+	<aside class="span4">
+		<section>
+			<%= render ('layouts/profile') %>
+		</section>
+	</aside>
+	<div class="span8">
+		<h1>Edit your profile</h1>
+		<h5>Please edit your current working status and your daily rate:</h5>
+		<%= form_for @user do |f| %>
+
+		  <%= render 'shared/error_messages', object: f.object %>
+		  
+		  <%= fields_for @user.freelancer_data do |g| %>
+
+			  <%= g.label :status %>
+			  <%= g.select :status, ['Busy', 'Available'] %>
+
+				<%= g.label :daily_rate, "Daily rate in Euro ('.' and ',' are not allowed)" %>
+			  <%= g.text_field :daily_rate %>
+
+			<% end %>
+
+		  <%= f.submit "Save changes", class: 'btn-large btn-primary' %>
+
+		<% end %>
+		<h5>If you want to change your picture, you can do it here:</h5>
+		<%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails">change</a>
+
+	</div>
+</div>

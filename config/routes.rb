@@ -1,6 +1,8 @@
 FreelanceStatus::Application.routes.draw do
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
 
   root to: "static_pages#home"
 
@@ -9,6 +11,8 @@ FreelanceStatus::Application.routes.draw do
   match '/howitworks', to: 'static_pages#howitworks'
   match '/impressum' , to: 'static_pages#impressum'
   match '/signup'    , to: 'users#new'
+  match '/login'     , to: 'sessions#new'
+  match '/logout'    , to: 'sessions#destroy', via: :delete
   
   
   # The priority is based upon order of creation:

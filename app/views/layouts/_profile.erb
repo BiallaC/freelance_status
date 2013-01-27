@@ -7,11 +7,11 @@
 <table>
 	<tr>
 		<td>Status:</td>
-		<td><%= @user.status %></td>
+		<td><%= @user.freelancer_data.status unless @user.freelancer_data.nil?%></td>
 	</tr>
 	<tr>
 		<td>Daily rate:</td> 
-		<td><%= @user.daily_rate %></td>
+		<td><%= @user.freelancer_data.daily_rate unless @user.freelancer_data.nil? %></td>
 	</tr>
 	<tr>
 		<td><%= link_to "Edit profile", edit_user_path(@user) %></td>
